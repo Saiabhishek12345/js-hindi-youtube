@@ -23,5 +23,8 @@ let isLoggedIn = false
 console.log(typeof undefined); // undefined
 console.log(typeof null); // object
 
+let x=BigInt("123445");
+let y=Symbol("hello!");
+
 
 
