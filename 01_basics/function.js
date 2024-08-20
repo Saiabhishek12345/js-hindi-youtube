@@ -57,12 +57,29 @@ let newArr=arr.filter((val)=>{
 
 console.log(newArr);*/
 
-let arr=[5,6,2,1,7];
+/*let arr=[5,6,2,1,7];
 
 let maxArr=arr.reduce((prev,curr)=>{
     return prev > curr ? prev : curr;
 });
 
-console.log(maxArr);
+console.log(maxArr);*/
+
+let n=prompt("enter the number: ");
+
+let arr=[];
+for(let i=1;i<=n;i++){
+   arr[i-1]=i;
+}
+console.log(arr);
+
+let output=arr.reduce((prev,curr)=>{
+
+    return prev*curr;
+
+})
+
+console.log(output);
+
 
 
