@@ -44,29 +44,56 @@ let leaxus= new ToyotaCar("lexaus",50);
 // leaxus.setBrand("leaxus");
 console.log(leaxus); */
 
-class person{
+/*class person{
 
-    constructor(){
+    constructor(name){
         this.species="homo sapiens";
+        this.name=name;
     }
     eat(){
        console.log("eat");   
     }
-    sleep(){
-        console.log("sleep");   
-    }
 }
 
 class Engineer extends person{
+
+    constructor(name){
+        super(name);  //to invoke parent class construtor
+        
+    }
      work(){
+        super.eat();
         console.log("solve problems,build something"); 
      }
-}
+}*/
 
-class Doctor extends person{
+/*class Doctor extends person{
     work(){
        console.log("solve problems,build something"); 
     }
+}*/
+
+// let obj = new Engineer("saiabhishek");
+let DATA="sceret information"
+class User{
+    constructor(name,email){
+        this.name=name;
+        this.email=email;
+    }
+    viewData(){
+        console.log("data = ",DATA);  
+    }
 }
 
-let obj = new Engineer();
+class Admin extends User{
+    constructor(name,email){
+        super(name,email);
+    }
+    viewData(){
+        DATA="add a new data";
+    }
+}
+
+let student1=new User("sai","saiagamil.com");
+let student2=new User("aman","aman.com");
+let admin=new Admin("admin","admin@gmail.com");
